@@ -366,6 +366,6 @@ This project is provided "as is" without warranty of any kind. Use at your own r
 ## 📚 Further Reading
 
 - [Principles of Chaos Engineering](https://principlesofchaos.org/)
-- [Chaos Engineering: Building Confidence in System Behavior Through Experiments](https://www.oreilly.com/library/view/chaos-engineering/9781491988459/)
 - [Why you should break things on purpose](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+- [Chaos Engineering: Building Confidence in System Behavior Through Experiments](https://www.oreilly.com/library/view/chaos-engineering/9781491988459/)
 
