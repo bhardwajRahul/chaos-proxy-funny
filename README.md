@@ -35,13 +35,13 @@ A delightfully devious reverse proxy that weaponizes Murphy's Law for your testi
 - [Acknowledgments](#acknowledgments)
 - [Further Reading](#further-reading)
 
-## What Is This Madness?
+## 🤔 What Is This Madness?
 
 Chaos Proxy is a Go-based reverse proxy that deliberately sabotages your HTTP requests in creative and configurable ways. Because who doesn't love it when they're APIs break?
 
 Think of it as a chaos engineering tool that sits between your application and its upstream services, randomly introducing failures, delays, and corrupted data.
 
-## Features
+## ⚡ Features
 
 ### Request Dropping
 Drop requests into the void like they never existed. No response, no error, just... nothing. You know that feeling when someone leaves you on read for three days? That's what this does to your API calls. Perfect for seeing how your application handles getting ghosted.
@@ -65,7 +65,7 @@ Chaos Proxy will randomly corrupt your responses using one of four strategies:
 ### Hot Reload
 Configuration changes are picked up automatically. Tweak your chaos parameters on the fly without restarting.
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -95,7 +95,7 @@ go build -o chaos-proxy ./cmd/chaos-proxy
 go run ./cmd/chaos-proxy
 ```
 
-## Configuration
+## ⚙️ Configuration
 
 Chaos Proxy uses a YAML configuration file at the root called `config.yaml`.
 
@@ -167,7 +167,7 @@ chaos:
   corrupt_rate: 90
 ```
 
-## Usage
+## 🎮 Usage
 
 ### Running the Proxy
 
@@ -229,7 +229,7 @@ The proxy logs what it's doing to each request, so you can see the chaos in acti
 [PROXY] GET /your-route
 ```
 
-## Architecture
+## 🏗️ Architecture
 
 ```
 ┌──────────┐      ┌──────────────┐      ┌──────────┐
@@ -275,7 +275,7 @@ chaos-proxy/
 └── README.md                     # You are here!
 ```
 
-## FAQ
+## 💬 FAQ
 
 **Q: Why would I want to intentionally break my service?**  
 A: It's better to find issues yourself in a controlled environment than to have them show up in production at 3 AM.
@@ -295,13 +295,13 @@ A: Absolutely. The more creative ways to break things, the merrier.
 **Q: My application is working perfectly with chaos enabled. What's wrong?**  
 A: Congratulations, either your application is incredibly resilient, or the chaos rates are too low. Try the Doomsday configuration if you want a real challenge.
 
-## Known Issues & Limitations
+## ⚠️ Known Issues & Limitations
 
 - The proxy doesn't support WebSockets (yet)
 - Very large response bodies might cause memory issues during corruption
 - If `latency_min > latency_max`, the proxy will panic. This is a feature, not a bug. Read the documentation, pls.
 
-## Development
+## 🛠️ Development
 
 ### Running Tests
 
@@ -326,7 +326,7 @@ Want to add a new type of chaos? Here's the general approach:
 4. Add configuration options to the YAML schema
 5. Write tests (unlike production outages, these are optional - but please write them)
 
-## Configuration Reference
+## 📋 Configuration Reference
 
 | Field | Type | Default | Description |
 |-------|------|---------|-------------|
@@ -340,7 +340,7 @@ Want to add a new type of chaos? Here's the general approach:
 | `chaos.latency_max` | string | `""` | Maximum random latency |
 | `chaos.corrupt_rate` | float | `0` | Percentage of responses to corrupt (0-100) |
 
-## Contributing
+## 🤝 Contributing
 
 Found a bug? Want to add a new chaos strategy? Contributions are welcome.
 
@@ -352,18 +352,18 @@ Found a bug? Want to add a new chaos strategy? Contributions are welcome.
 
 Please include tests for new features. We may inject chaos into your code, but we're not barbarians.
 
-## License
+## 📜 License
 
 This project is provided "as is" without warranty of any kind. Use at your own risk. Not responsible for any production outages, sleepless nights, or existential crises caused by this software.
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
 - Inspired by [Chaos Monkey](https://netflix.github.io/chaosmonkey/) and other chaos engineering tools
 - Built with [Go](https://golang.org/) because I wanted to
 - Thanks to Murphy's Law for the original concept
 - Shoutout to all the developers who will use this to make their applications more resilient
 
-## Further Reading
+## 📚 Further Reading
 
 - [Principles of Chaos Engineering](https://principlesofchaos.org/)
 - [Chaos Engineering: Building Confidence in System Behavior Through Experiments](https://www.oreilly.com/library/view/chaos-engineering/9781491988459/)
